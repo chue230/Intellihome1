@@ -1,19 +1,37 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:gravity="center">
 
+    <!-- Input para ingresar el código -->
     <EditText
-        android:id="@+id/codeInput"
+        android:id="@+id/editTextCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingresa el código" />
+        android:hint="Ingresa el código de verificación"
+        android:inputType="number"
+        android:maxLength="5"
+        android:gravity="center"/>
 
-    <Button
-        android:id="@+id/verifyButton"
+    <!-- Texto para mostrar el tiempo restante -->
+    <TextView
+        android:id="@+id/textViewTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Verificar" />
+        android:layout_marginTop="16dp"
+        android:text="Tiempo restante: 2:00"
+        android:textSize="18sp"
+        android:textColor="#FF0000" />
+
+    <!-- Botón para verificar el código -->
+    <Button
+        android:id="@+id/buttonVerifyCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Verificar Código" />
+
 </LinearLayout>
