@@ -17,7 +17,7 @@ import java.net.Socket;
 public class MainActivity extends AppCompatActivity {
 
     private EditText aliasInput, passwordInput;
-    private Button loginButton, registerButton;
+    private Button loginButton, registerButton, forgotPasswordButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         passwordInput = findViewById(R.id.passwordInput);
         loginButton = findViewById(R.id.loginButton);
         registerButton = findViewById(R.id.registerButton);
+        forgotPasswordButton = findViewById(R.id.forgotPasswordButton);
+        forgotPasswordButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ForgotPasswordActivity.class);
+            startActivity(intent);
+        });
 
         loginButton.setOnClickListener(v -> attemptLogin());
         registerButton.setOnClickListener(v -> {
@@ -48,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Ejecutar la conexión al servidor en un hilo separado
         new Thread(() -> {
-            try (Socket socket = new Socket("172.26.42.125", 1335);
+            try (Socket socket = new Socket("172.18.246.81", 1335);
                  OutputStreamWriter output = new OutputStreamWriter(socket.getOutputStream());
                  BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 
