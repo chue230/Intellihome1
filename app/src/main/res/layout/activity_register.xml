@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:spacing="16dp">
+
+        <EditText
+            android:id="@+id/aliasRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alias (Usuario)"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre Completo" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/uploadProfilePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cargar Foto de Perfil" />
+
+        <TextView
+            android:id="@+id/birthDateDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Fecha"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text" />
+
+        <Button
+            android:id="@+id/selectBirthDateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Fecha de Nacimiento" />
+
+        <!-- Apartado de contraseña -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+
+
+
+        <!-- Datos de tarjeta -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos de Tarjeta de tarjeta (opcional)"
+            android:textStyle="bold"
+            android:paddingTop="20dp" />
+
+        <EditText
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de Tarjeta"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/cardHolderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del Titular"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/expiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Expiración (MM/AA)"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/cvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CVV"
+            android:inputType="numberPassword" />
+
+        <!-- Estilos de Casa -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estilos de Casa"
+            android:textStyle="bold"
+            android:paddingTop="20dp" />
+
+        <CheckBox
+            android:id="@+id/styleModern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moderno" />
+
+        <CheckBox
+            android:id="@+id/styleClassic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clásico" />
+
+        <CheckBox
+            android:id="@+id/styleMinimalist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minimalista" />
+
+        <!-- Tipos de Transporte -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipos de Transporte"
+            android:textStyle="bold"
+            android:paddingTop="20dp" />
+
+        <CheckBox
+            android:id="@+id/transportCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Automóvil" />
+
+        <CheckBox
+            android:id="@+id/transportMotorcycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motocicleta" />
+
+        <CheckBox
+            android:id="@+id/transportBicycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bicicleta" />
+
+        <!-- Validación de correo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Antes de completar registro, valida el correo y que los datos no existan"
+            android:paddingTop="20dp"
+            android:textStyle="italic"
+            android:textColor="#FF0000" />
+
+        <Button
+            android:id="@+id/validateEmailButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Validar Correo y alias" />
+
+        <EditText
+            android:id="@+id/verificationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Código de Verificación"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/completeRegistrationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Completar Registro"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>
