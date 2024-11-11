@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AdminActivity extends AppCompatActivity {
-
+// comentario
     private TextView adminGreeting;
     private Button logoutButton, manageUsersButton;
 
